@@ -11,6 +11,11 @@ long_mode_start:
     mov es, ax
     mov fs, ax
     mov gs, ax
-
 	call kernel_main
     hlt
+
+; example of user input
+; loop_input:
+;     in al, 0x60
+;     mov byte [0xb8000], al
+;     jmp loop_input
